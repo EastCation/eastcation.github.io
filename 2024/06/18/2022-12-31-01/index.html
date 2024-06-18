@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Starmoe&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="UserLAnd进阶教程1：配置简易VNC图形界面Stramoe の Blog [TLSD] 上一章我们成功地配置了ssh界面和中文环境，本章为大家讲述如何配置一个简单的图形界面。   Step1.安装x11及其组件启动到ssh会话，输入以下内容后回车： 123apt install xorg  下载xorg-server用时可能会比较长，静等。 安装mwm窗口管理器UserLAnd自带的twm窗">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Starmoe&#39;s Blog">
+<meta property="og:url" content="http://example.com/2024/06/18/2022-12-31-01/index.html">
+<meta property="og:site_name" content="Starmoe&#39;s Blog">
+<meta property="og:description" content="UserLAnd进阶教程1：配置简易VNC图形界面Stramoe の Blog [TLSD] 上一章我们成功地配置了ssh界面和中文环境，本章为大家讲述如何配置一个简单的图形界面。   Step1.安装x11及其组件启动到ssh会话，输入以下内容后回车： 123apt install xorg  下载xorg-server用时可能会比较长，静等。 安装mwm窗口管理器UserLAnd自带的twm窗">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-06-18T02:05:02.899Z">
+<meta property="article:modified_time" content="2024-06-18T02:05:02.899Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Starmoe's Blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Starmoe&#39;s Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-2022-12-31-01" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/06/18/2022-12-31-01/" class="article-date">
+  <time class="dt-published" datetime="2024-06-18T02:05:02.899Z" itemprop="datePublished">2024-06-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="UserLAnd进阶教程1：配置简易VNC图形界面"><a href="#UserLAnd进阶教程1：配置简易VNC图形界面" class="headerlink" title="UserLAnd进阶教程1：配置简易VNC图形界面"></a>UserLAnd进阶教程1：配置简易VNC图形界面</h1><h2 id="Stramoe-の-Blog-TLSD"><a href="#Stramoe-の-Blog-TLSD" class="headerlink" title="Stramoe の Blog [TLSD]"></a>Stramoe の Blog [TLSD]</h2><hr>
+<p>上一章我们成功地配置了ssh界面和中文环境，本章为大家讲述如何配置一个简单的图形界面。  </p>
+<h2 id="Step1-安装x11及其组件"><a href="#Step1-安装x11及其组件" class="headerlink" title="Step1.安装x11及其组件"></a>Step1.安装x11及其组件</h2><p>启动到ssh会话，输入以下内容后回车：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">apt install xorg</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>下载xorg-server用时可能会比较长，静等。</p>
+<h2 id="安装mwm窗口管理器"><a href="#安装mwm窗口管理器" class="headerlink" title="安装mwm窗口管理器"></a>安装mwm窗口管理器</h2><p>UserLAnd自带的twm窗口管理器，用起来可能不太方便，所以这里使用mwm作为窗口管理器。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">sudo apt install mwm -y</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>安装后会覆盖系统原有的配置，如果你喜欢其他窗口管理器（例如fvwm），在安装后照样覆盖。</p>
+<h2 id="创建VNC会话并配置"><a href="#创建VNC会话并配置" class="headerlink" title="创建VNC会话并配置"></a>创建VNC会话并配置</h2><ul>
+<li><em>这里建议使用VNC Viewer，如果你对其他VNC软件熟悉也可以</em></li>
+</ul>
+<p>与上一期的配置ssh会话类似，就是服务类别为VNC。</p>
+<p>创建完成后，点击VNC会话，看到“开始服务”后表明服务已开启。</p>
+<p>转到VNC软件，创建一个新主机。</p>
+<p>UserLAnd的VNC端口为5951（:51），所以在地址栏输入localhost:5951（&#x2F;51）保存即可。</p>
+<ul>
+<li><em>如果在创建时支持输入VNC密码，强烈建议您在这一阶段输入密码并储存，以节省时间。</em></li>
+</ul>
+<p>点进刚刚创建的主机，输入VNC密码（6-8位），进入桌面。</p>
+<p>mwm的操作方法与大部分窗口管理器类似，右键长按空白区域召出菜单。</p>
+<p>现在，桌面上应该有一个xterm终端。</p>
+<p>不过现在这个xterm显示中文不是很理想，有文字缺失的情况，所以我们要回到ssh，编辑在主文件夹的.Xresources文件。键入以下内容并保存</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">*VT100.font: 9x15</span><br><span class="line">*VT100.utf8Fonts.font: -misc-fixed-medium-r-normal--18-120-100-100-c-90-iso10646-1</span><br><span class="line"></span><br><span class="line">xterm*background: black</span><br><span class="line">xterm*foreground: gray</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>这样就差不多了。</p>
+<h2 id="浏览网络"><a href="#浏览网络" class="headerlink" title="浏览网络"></a>浏览网络</h2><p>x11下有一个浏览器，叫dillo，兼容性大概和IE6那样罢，要安装它，请键入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">sudo apt install dillo -y</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>这个浏览器默认是不显示中文的，因此我们要写点东西。</p>
+<p>先“sudo apt install ttf-wqy*”安装中文字体</p>
+<p>之后在”~&#x2F;.dillo&#x2F;“（没有可以创建）创建一个dillorc文档，添加如下内容并保存：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">font_serif=&quot;Serif&quot;</span><br><span class="line">font_sans_serif=&quot;Sans&quot;</span><br><span class="line">font_cursive=&quot;Sans&quot;</span><br><span class="line">font_fantasy=&quot;Sans&quot;</span><br><span class="line">font_monospace=&quot;Sans Mono&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>简易VNC配置到这里就结束了，下一章是配置桌面环境——xfce4，将在新的一年发出。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/06/18/2022-12-31-01/" data-id="clxjtkt310006o7y085jw177o" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2024/06/18/2022-12-30-03/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2024/06/18/2023-01-01-01/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archive/2024/06/">June 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/06/18/test/">test</a>
+          </li>
+        
+          <li>
+            <a href="/2024/06/18/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2024/06/18/2022-12-29-01/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2024/06/18/2022-12-29-02/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2024/06/18/2022-12-29-03/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
