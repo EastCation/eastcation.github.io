@@ -18,6 +18,8 @@
     <link rel="alternative" href="atom.xml" title="Starmoe&#39;s Blog" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.jpg"> 
     
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
     
     
     <meta name="twitter:card" content="summary"/>
@@ -164,13 +166,13 @@
         
         
     <div id="gitalk-container" class="comment link"
-		data-enable="false"
+		data-enable="true"
         data-ae="true"
-        data-ci=""
-        data-cs=""
-        data-r=""
-        data-o=""
-        data-a=""
+        data-ci="Ov23lihuvvdt62G0mgut"
+        data-cs="5a4b53aa69150b82f7c0c592c440c79424fe24bd"
+        data-r="Starmoe-LinuxCN"
+        data-o="EastCation"
+        data-a="EastCation"
         data-d="false"
     >查看评论</div>
 
@@ -187,6 +189,8 @@
     </div>
 </div>
 </body>
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
 
 
 <script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
@@ -252,6 +256,25 @@
 </div>
 
 
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+        messageStyle: "none"
+    });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
 
 
 
