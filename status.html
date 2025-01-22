@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starmoe Status</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        h1{
+            margin: 0;
+            margin-bottom: 10px;
+        }
+        p{
+            margin: 0;
+            margin-bottom: 20px;
+        }
+        .progress-container{
+            width: 400px;
+            margin-bottom: 20px;
+            background-color: #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .progress-bar{
+            height: 40px;
+            background-color: pink;
+            color: white;
+            text-align: center;
+            line-height: 40px;
+            transition: width 0.5s;
+        }
+        .label{
+            margin-bottom: 10px;
+        }
+        canvas{
+            border: 1px solid #000;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Starmoe Status</h1>
+    <p>此页显示了她的状态</p>
+    <p id="updateTime">时间：</p>
+    <div class="label">可爱程度</div>
+    <div class="progress-container" id="cuteProgress"></div>
+    <div class="label">压力</div>
+    <div class="progress-container" id="stressProgress"></div>
+    <div class="label">黑暗值</div>
+    <div class="progress-container" id="darknessProgress"></div>
+    <div class="label">生命值</div>
+    <div class="progress-container" id="healthProgress"></div>
+    <canvas id="pieChart"></canvas>
+    <script src="script.js"></script>
+</body>
+</html>
