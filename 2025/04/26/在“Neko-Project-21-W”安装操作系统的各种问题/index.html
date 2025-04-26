@@ -1,0 +1,345 @@
+
+<!DOCTYPE html>
+<html lang="zh" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>在“Neko Project 21/W”安装操作系统的各种问题 - Starmoe&#39;s Blog</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="萌雨社,NuanR_Mxi,SkyDynamic,NRLT Insider,Starmoe,"> 
+    <meta name="description" content="本以为PC-98安装Windows会在跟86Box一样顺利，结果却踩了一堆坑，下面我就来说说在PC-98安装Windows的各种问题。
+安装DOS俗话说：“千里之行始于足下”，安装系统也是一样的，在,"> 
+    <meta name="author" content="辉夜星瞳/暖日明曦"> 
+    <link rel="alternative" href="atom.xml" title="Starmoe&#39;s Blog" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.jpg"> 
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="在“Neko Project 21/W”安装操作系统的各种问题 - Starmoe&#39;s Blog"/>
+    <meta name="twitter:description" content="本以为PC-98安装Windows会在跟86Box一样顺利，结果却踩了一堆坑，下面我就来说说在PC-98安装Windows的各种问题。
+安装DOS俗话说：“千里之行始于足下”，安装系统也是一样的，在,"/>
+    
+    
+    
+    
+    <meta property="og:site_name" content="Starmoe&#39;s Blog"/>
+    <meta property="og:type" content="object"/>
+    <meta property="og:title" content="在“Neko Project 21/W”安装操作系统的各种问题 - Starmoe&#39;s Blog"/>
+    <meta property="og:description" content="本以为PC-98安装Windows会在跟86Box一样顺利，结果却踩了一堆坑，下面我就来说说在PC-98安装Windows的各种问题。
+安装DOS俗话说：“千里之行始于足下”，安装系统也是一样的，在,"/>
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+    <script>window.searchDbPath = "/search.xml";</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">Starmoe&#39;s Blog</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="https://moerain.cn"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">在“Neko Project 21/W”安装操作系统的各种问题</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">在“Neko Project 21/W”安装操作系统的各种问题</h1>
+        <div class="stuff">
+            <span>四月 26, 2025</span>
+            
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/PC-98/" rel="tag">PC-98</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/Windows/" rel="tag">Windows</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <p>本以为PC-98安装Windows会在跟86Box一样顺利，结果却踩了一堆坑，下面我就来说说在PC-98安装Windows的各种问题。</p>
+<h2 id="安装DOS"><a href="#安装DOS" class="headerlink" title="安装DOS"></a>安装DOS</h2><p>俗话说：“千里之行始于足下”，安装系统也是一样的，在正常的i386机器，我们安装Windows95一般是以下流程:<code>加载安装镜像→格式化分区→复制文件→安装硬件→完成安装</code>。本来我认为在PC-98模拟器上安装Windows 95也是一样的步骤，也可能是由于模拟器自身原因，从CD软盘加载镜像会找不到分区。（当然我是格了FAT16的）</p>
+<p>所以只能用这种传统方法，在硬盘上先安装DOS，然后从硬盘的DOS安装Windows 95。</p>
+<p>首先你要选对DOS版本，WinWorld能查找最新支持日文的DOS是5.0，一共有三个版本：</p>
+<table>
+<thead>
+<tr>
+<th align="center">版本</th>
+<th>问题</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Microsoft MS-DOS 5.00 [NEC PC-9800]</td>
+<td>软盘载入不进去，无法安装</td>
+</tr>
+<tr>
+<td align="center">Microsoft MS-DOS 5.00 [NEC PC-9801] [Epson OEM]</td>
+<td>不知道是不是因为爱普生OEM的原因，安装会卡死在2号盘</td>
+</tr>
+<tr>
+<td align="center">Microsoft MS-DOS 5.00a-h [NEC PC-9800]</td>
+<td>笔者测试过唯一可用的DOS</td>
+</tr>
+</tbody></table>
+<p>为了防止你们找不到它在哪，我在这里放个<a target="_blank" rel="noopener" href="https://winworldpc.com/download/98cc153d-b78d-11e7-b8e6-fa163e9022f0">链接</a>，点进去就能下载了。</p>
+<p>载入0号盘启动，之后载入1号盘，键入“instdos”回车后开始安装。安装流程与普通DOS别无二致，懂日语的朋友应该速度会快一点。</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="images\2025-04-26\NP2_0002.bmp">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">安装完成后重启的提示</div>
+</center>
+
+<p>弹出3号盘，重启我们就会进入到DOS界面。</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="images\2025-04-26\NP2_0004.bmp">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">DOS Shell</div>
+</center>
+
+<h2 id="安装Windows-95，98，2000"><a href="#安装Windows-95，98，2000" class="headerlink" title="安装Windows 95，98，2000"></a>安装Windows 95，98，2000</h2><p>由于这个DOS是不带光盘驱动的，所以我们还需要一个带CD-ROM的驱动的启动盘，我会在这里提供下载。</p>
+<p>载入软盘，选择第八个选项回车，之后它会告诉你CD-ROM驱动器已被挂载到E:分区。</p>
+<p>载入Windows 95的光盘镜像，接下来输入以下命令：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">A:￥&gt; C:</span><br><span class="line">C:￥&gt; <span class="built_in">md</span> win95</span><br><span class="line">C:￥&gt; E:</span><br><span class="line">E:￥&gt; <span class="built_in">copy</span> win95 C:￥win95</span><br></pre></td></tr></table></figure>
+
+<p>弹出光盘，切回DOS，Shift+F9进入命令行界面，键入”cd win95,setup”即可进行安装。</p>
+<p>不出意外的话，出意外了。</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="images\2025-04-26\NP2_0005.bmp">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">呜喵……</div>
+</center>
+
+<p>相信很多不懂日语的朋友跟我一样是懵的，这是什么玩意儿？仔细想想或者拿翻译软件翻译一下就知道：CONFIG.SYS里的print.sys与安装程序不兼容。所以我们还需要屏蔽这个文件。</p>
+<p>拿带edit的软盘编辑CONFIG.SYS，，找到第五行：“DEVICEHIGH&#x3D;A:￥DOS￥PRINT.SYS &#x2F;U”，将其删除保存即可。</p>
+<center>
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="images\2025-04-26\NP2_0006.bmp">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">删了这行就行</div>
+</center>
+
+<p>之后安装程序便可正常运行。</p>
+<center>
+    <img src="images\2025-04-26\NP2_0007.bmp">
+</center>
+
+<p>Windows95 KEY:35296-OEM-017544-11451 (最后五位随便填)</p>
+<p>安装好Windows 95后，其他系统直接用Win95升级或者全新安装即可。</p>
+<center>
+    <img src="images\2025-04-26\NP2_0001.bmp">
+</center>
+
+<center>
+    <img src="images\2025-04-26\NP2_0003.bmp">
+</center>
+
+<h2 id="文件下载"><a href="#文件下载" class="headerlink" title="文件下载"></a>文件下载</h2><p><a href="files%5CCDBOOT.d88">带有CD驱动的软盘</a></p>
+<p><a href="files%5CDOS_With_edit.fdi">带有EDIT的软盘</a></p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="true">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title="0" data-url="https://files.moerain.cn/f/27Sw/%E6%B3%A0%E9%B8%A2yousa%20-%20%E5%8B%BE%E6%8C%87%E8%B5%B7%E8%AA%93.mp3"></li>
+                        
+                    
+                        
+                            <li title="1" data-url="https://files.moerain.cn/f/QBc9/%E6%B3%A0%E9%B8%A2yousa%20-%20%E7%88%B7%E7%88%B7%E7%9A%84%E6%95%85%E4%B9%A1.mp3"></li>
+                        
+                    
+                        
+                            <li title="2" data-url="https://files.moerain.cn/f/Byu2/%E6%B3%A0%E9%B8%A2yousa%20-%20%E8%88%AA%E5%90%91%E4%BD%A0%E7%9A%84%E6%B5%B7%E5%B2%9B.mp3"></li>
+                        
+                    
+                        
+                            <li title="3" data-url="https://files.moerain.cn/f/X1FB/%E6%B3%A0%E9%B8%A2yousa%20-%20%E5%B0%8F%E6%9F%B3%E5%84%BF.mp3"></li>
+                        
+                    
+                        
+                            <li title="4" data-url="https://files.moerain.cn/f/VeCY/%E3%83%9F%E3%83%84%E3%82%AD%E3%83%A8%20-%20Constant%20Moderato.mp3"></li>
+                        
+                    
+                        
+                            <li title="5" data-url="https://files.moerain.cn/f/zETl/%E7%8E%8B%E5%8A%9B%E5%AE%8F%20-%20%E5%A4%A7%E5%9F%8E%E5%B0%8F%E7%88%B1.mp3"></li>
+                        
+                    
+                        
+                            <li title="6" data-url="https://files.moerain.cn/f/e9f3/25%20First%20Snow%20%28Extended%20Mix%29.mp3"></li>
+                        
+                    
+                        
+                            <li title="7" data-url="https://files.moerain.cn/f/v5iV/02%20Paper%20Witch.mp3"></li>
+                        
+                    
+                        
+                            <li title="8" data-url="https://files.moerain.cn/f/rQU0/09%20Far%20Away%20Light.mp3"></li>
+                        
+                    
+                        
+                            <li title="9" data-url="https://files.moerain.cn/f/A6hD/%E6%B3%A0%E9%B8%A2yousa%20-%20%E5%87%A0%E5%88%86%E9%80%A0%E4%BD%9C.mp3"></li>
+                        
+                    
+                        
+                            <li title="10" data-url="https://files.moerain.cn/f/DeHW/%E6%B3%A0%E9%B8%A2yousa%20-%20%E6%88%91%E7%9A%84%E6%95%85%E4%BA%8B%E6%9C%AA%E5%86%99%E5%AE%8C.mp3"></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+        
+    <div id="gitalk-container" class="comment link"
+		data-enable="true"
+        data-ae="true"
+        data-ci="Ov23lihuvvdt62G0mgut"
+        data-cs="5a4b53aa69150b82f7c0c592c440c79424fe24bd"
+        data-r="Starmoe-LinuxCN"
+        data-o="EastCation"
+        data-a="EastCation"
+        data-d="false"
+    >查看评论</div>
+
+
+    </div>
+    
+        <div class="side">
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85DOS"><span class="toc-number">1.</span> <span class="toc-text">安装DOS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Windows-95%EF%BC%8C98%EF%BC%8C2000"><span class="toc-number">2.</span> <span class="toc-text">安装Windows 95，98，2000</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD"><span class="toc-number">3.</span> <span class="toc-text">文件下载</span></a></li></ol>
+        </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+        messageStyle: "none"
+    });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+
+</html>
